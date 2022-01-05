@@ -20,7 +20,7 @@ public class ResultsPage {
     private WebElement textInput;
     @FindBy(xpath = "//*[@id='offer-apply-container']/form/div[1]/div[4]/div/div[2]//input")
     private WebElement cvUpload;
-    @FindBy(xpath ="//*[@id='offer-apply-container']/form/div[1]/div[4]/div/div[2]//input")
+    @FindBy(xpath ="//span[text()='Apply']")
     private WebElement sendApply;
 
 
@@ -47,6 +47,6 @@ public class ResultsPage {
     }
 
     public void sendApply(){
-        sendApply.click();
+        sendApply.isDisplayed();
     }
 }

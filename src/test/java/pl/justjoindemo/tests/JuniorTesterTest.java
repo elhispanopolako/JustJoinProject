@@ -14,9 +14,12 @@ public class JuniorTesterTest extends BaseTest {
         headerPage.setShowOffer();
         ResultsPage resultsPage=new ResultsPage(driver);
         resultsPage.chooseJobOffers(1);
-
-        resultsPage.setForm("Tadeusz Woźniak", "tadeo98hiszpan@gmail.com");
-        resultsPage.setCvUpload();
+        try {
+            resultsPage.setForm("Tadeusz Woźniak", "tadeo98hiszpan@gmail.com");
+            resultsPage.setCvUpload();
+        }catch (NoSuchElementException e){
+            resultsPage.sendApply();
+        }
 
 
     }
