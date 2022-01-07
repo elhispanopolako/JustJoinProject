@@ -1,5 +1,6 @@
 package pl.justjoindemo.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +15,10 @@ public class HeaderPage {
     private WebElement juniorLevel;
     @FindBy(xpath = "//span[contains(text(),'Show offers')]")
     private WebElement showOffer;
+   @FindBy(xpath ="//span[text()='Sign in']")
+    private WebElement signUpBtn;
+   @FindBy(xpath = "//span[text()='Sign in as a developer']")
+   private WebElement signUp2Btn;
 
     private WebDriver driver;
 
@@ -30,5 +35,9 @@ public class HeaderPage {
     }
     public void setShowOffer(){
         showOffer.click();
+    }
+    public void setsignUp(){
+        signUpBtn.click();
+        signUp2Btn.click();
     }
 }

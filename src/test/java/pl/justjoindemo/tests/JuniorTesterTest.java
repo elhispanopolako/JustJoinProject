@@ -17,6 +17,25 @@ public class JuniorTesterTest extends BaseTest {
         try {
             resultsPage.setForm("Tadeusz Woźniak", "tadeo98hiszpan@gmail.com");
             resultsPage.setCvUpload();
+            resultsPage.sendApply();
+        }catch (NoSuchElementException e){
+            resultsPage.sendApply();
+        }
+
+
+    }
+    @Test
+    public void juniorOffersTest2()  {
+        HeaderPage headerPage=new HeaderPage(driver);
+        headerPage.setTestTech();
+        headerPage.setJuniorLevel();
+        headerPage.setShowOffer();
+        ResultsPage resultsPage=new ResultsPage(driver);
+        resultsPage.chooseJobOffers(2);
+        try {
+            resultsPage.setForm("Tadeusz Woźniak", "tadeo98hiszpan@gmail.com");
+            resultsPage.setCvUpload();
+            resultsPage.sendApply();
         }catch (NoSuchElementException e){
             resultsPage.sendApply();
         }
