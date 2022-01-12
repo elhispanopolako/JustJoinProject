@@ -18,7 +18,7 @@ public class BaseTest {
         driver.get("https://justjoin.it/");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/button/span[1]")).click();
     }
-    /*@AfterMethod
+   /* @AfterMethod
     public void tearDown() {driver.quit();}*/
 }
 

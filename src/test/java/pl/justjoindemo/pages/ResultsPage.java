@@ -10,7 +10,7 @@ import java.util.List;
 
 
 public class ResultsPage {
-    @FindBy(xpath="//div[contains(text(),'Tester')]")
+    @FindBy(xpath="//div[contains(text(),'Tester') or contains(text(),'Q')]")
     private List<WebElement> jobOffers;
     @FindBy(xpath ="//*[@id='offer-apply-container']/form/div[1]/div[1]/div/div[2]/div/input" )
     private WebElement nameInput;
